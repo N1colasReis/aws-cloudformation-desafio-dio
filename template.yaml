@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Minha primeira Stack CloudFormation - Desafio DIO'
+
+Resources:
+  MeuBucketS3Desafio:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Sub 'dio-cloudformation-bucket-${AWS::AccountId}'
+      VersioningConfiguration:
+        Status: Enabled
